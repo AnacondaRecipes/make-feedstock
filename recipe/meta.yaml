@@ -15,6 +15,10 @@ build:
   number: 0
   skip: true  # [win]
 
+requirements:
+  build:
+    - {{ compiler('c') }}
+
 test:
   command:
     - $PREFIX/bin/make --help
