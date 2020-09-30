@@ -1,6 +1,6 @@
 # Jinja variables help maintain the recipe as you'll update the version only here.
 {% set version = "4.3" %}
-{% set sha256 = "d5a32a82cb757c0026f2394d86a42fb5e3a2a6f8e89ad91904e33ce1cff092ac" %}
+{% set sha256 = "e05fdde47c5f7ca45cb697e973894ff4f5d79e13b750ed57d7b66d8defc78e19" %}
 
 package:
   name: make
