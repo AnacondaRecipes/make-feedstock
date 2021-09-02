@@ -1,3 +1,9 @@
+#!/usr/bin/bash
+
+set -x
+
+cp -r ${BUILD_PREFIX}/share/libtool/build-aux/config.* ./config
+
 ./configure --prefix=${PREFIX} \
             --host=${HOST}
 make -j${CPU_COUNT} ${VERBOSE_AT}
