@@ -9,7 +9,7 @@ package:
 
 source:
   fn: make-{{ version }}.tar.gz
-  url: https://ftp.gnu.org/gnu/make/make-{{ version }}.tar.gz
+  url: https://ftp.gnu.org/gnu/make/make-{{ version }}.tar.gz.
   sha256: {{ sha256 }}
 
 build:
@@ -21,7 +21,6 @@ requirements:
   build:
     - {{ compiler('c') }}   # [unix]
     - libtool               # [not win]
-    - bash                  # [unix]
 
 test:
   command:
