@@ -15,7 +15,7 @@ source:
 build:
   number: {{ build_number }}
   skip: true  # [win]
-  detect_binary_files_with_prefix: False  # [win]
+  detect_binary_files_with_prefix: False
 
 requirements:
   build:
