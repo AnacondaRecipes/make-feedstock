@@ -1,25 +1,26 @@
 # Jinja variables help maintain the recipe as you'll update the version only here.
-{% set version = "4.2.1" %}
-{% set sha256 = "d6e262bf3601b42d2b1e4ef8310029e1dcf20083c5446b4b7aa67081fdffc589" %}
+{% set version = "4.3" %}
+{% set sha256 = "e05fdde47c5f7ca45cb697e973894ff4f5d79e13b750ed57d7b66d8defc78e19" %}
+{% set build_number = "0"}
 
 package:
   name: make
   version: {{ version }}
 
 source:
-  fn: make-{{ version }}.tar.bz2
-  url: https://ftp.gnu.org/gnu/make/make-{{ version }}.tar.bz2
+  fn: make-{{ version }}.tar.gz
+  url: https://ftp.gnu.org/gnu/make/make-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: {{ build_number }}
   skip: true  # [win]
   detect_binary_files_with_prefix: False
 
 requirements:
   build:
     - {{ compiler('c') }}
-    - libtool               # [not win]
+    - libtool
 
 test:
   command:
@@ -28,8 +29,10 @@ test:
 about:
   home: https://www.gnu.org/software/make/
   license: GPLv3
+  license_family: GPL
   summary: "GNU Make is a tool which controls the generation of executables and other non-source files of a program from the program's source files."
   doc_url: https://www.gnu.org/software/make/manual/
+  dev_url: http://savannah.gnu.org/projects/make/
 
 extra:
   recipe-maintainers:
