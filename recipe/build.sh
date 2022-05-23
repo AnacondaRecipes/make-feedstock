@@ -2,6 +2,7 @@
 
 set -x
 
+mkdir -p config
 cp -r ${BUILD_PREFIX}/share/libtool/build-aux/config.* ./config
 
 ./configure --prefix=${PREFIX} \
