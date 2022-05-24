@@ -19,8 +19,8 @@ build:
 
 requirements:
   build:
-    - {{ compiler('c') }}   # [unix]
-    - libtool               # [not win]
+    - {{ compiler('c') }}
+    - libtool
 
 test:
   command:
