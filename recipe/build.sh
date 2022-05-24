@@ -12,16 +12,13 @@ fi
 
 if [[ ${target_platform} =~ linux* || ${target_platform} =~ .*aarch64.* || ${target_platform} =~ .*ppc64le.* ]]; then
   config_opts="--disable-dependency-tracking"
-else
-  config_opts=""
 fi
 
 ./configure --prefix=${PREFIX} \
             --host=${HOST} \
             ${config_opts}
-# make -j${CPU_COUNT} ${VERBOSE_AT}
 
-# bootstrap building make without make
+# build.sh in source code used for bootstrapping
 bash build.sh
 
 ./make check
