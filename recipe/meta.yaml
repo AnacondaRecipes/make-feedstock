@@ -21,6 +21,9 @@ requirements:
     - {{ compiler('c') }}
     - libtool               # [not win]
     - perl
+    # - make  .... would be required, but is a cyclic dependency, which is not handled
+    #   by conda-build proper now.  as soon as this is fixed, we can remove the kludge
+    #   in build.sh for it, and add this dependency here instead.
 
 test:
   command:
